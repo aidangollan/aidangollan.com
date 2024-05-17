@@ -8,10 +8,15 @@ export default function SparkleBlobs() {
         <div className="fixed inset-0 z-0 bg-black">
         <BackgroundGradientAnimation
           interactive={false}
-          gradientBackgroundStart="rgb(0, 0, 0)"
-          gradientBackgroundEnd="rgb(0, 0, 0)"
-          firstColor="255, 255, 255"
-          size="100%"
+          gradientBackgroundStart="rgb(0, 0, 139)"
+          gradientBackgroundEnd="rgb(220, 20, 60)"
+          firstColor="18, 113, 255"
+          secondColor="221, 74, 255"
+          thirdColor="100, 220, 255"
+          fourthColor="200, 50, 50"
+          fifthColor="180, 180, 50"
+          pointerColor="140, 100, 255"
+          size="60%"
           blendingValue="hard-light"
           containerClassName="absolute inset-0"
         >
