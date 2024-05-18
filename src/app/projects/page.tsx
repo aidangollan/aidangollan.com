@@ -7,7 +7,7 @@ export default function ProjectsPage() {
         <div className="bg-black text-white flex flex-col items-center justify-center min-h-screen w-full overflow-x-hidden">
             <FloatingNav />
             <p>
-                Projects
+                Projects page coming soon!
             </p>
         </div>
     )

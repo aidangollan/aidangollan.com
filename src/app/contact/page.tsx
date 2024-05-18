@@ -5,7 +5,7 @@ export default function Contact() {
         <div className="bg-black flex flex-col items-center justify-center min-h-screen w-full overflow-x-hidden">
             <FloatingNav />
             <p className="text-white">
-                Contact
+                Contact page coming soon!
             </p>
         </div>
     )
