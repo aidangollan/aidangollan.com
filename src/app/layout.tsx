@@ -9,7 +9,7 @@ const inter = Inter({
 export const metadata = {
   title: "Aidan Gollan",
   description: "Welcome to my wonderful website :)",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/galaxy.ico" }],
 };
 
 export default function RootLayout({
