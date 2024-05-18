@@ -23,6 +23,17 @@ export const views = createTable(
   "view",
   {
     id: serial("id").primaryKey(),
-    views: numeric("views"),
+    views: numeric("views").notNull(),
   }
 );
+
+export const profiles = createTable(
+  "profile",
+  {
+    id: serial("id").primaryKey(),
+    email: varchar("email").notNull(),
+    githubLink: varchar("github_link").notNull(),
+    linkedinLink: varchar("linkedin_link").notNull(),
+    resumeLink: varchar("resume_link").notNull(),
+  }
+)

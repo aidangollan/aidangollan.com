@@ -1,14 +1,15 @@
 import { db } from "~/server/db";
 import { views } from "../db/schema";
+import { Views } from "~/types";
 
 export async function getViews() {
-    const views = await db.query.views.findFirst();
+    const views: Views | undefined = await db.query.views.findFirst();
 
-    return views?.views ?? 0;
+    return views?.views ?? "0";
 }
 
 export async function incrementViews() {
-    const existingViews = await db.query.views.findFirst();
+    const existingViews: Views | undefined = await db.query.views.findFirst();
 
     if (!existingViews) {
         return;

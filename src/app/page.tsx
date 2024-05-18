@@ -3,24 +3,27 @@
 import { FloatingNav } from "~/components/ui/nav";
 import SparkleBlobs from "./sparkleBlobs";
 import Link from "next/link";
-import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Eye, Github, Linkedin } from "lucide-react";
 import { getViews, incrementViews } from "~/server/actions/views";
+import { getProfile } from "~/server/actions/profile";
+import { Profile } from "~/types";
 
 export default async function HomePage() {
-  const views = await getViews();
+  const views: string = await getViews();
   await incrementViews();
+  const profile: Profile | undefined = await getProfile();
 
   return (
     <>
       <SparkleBlobs />
       <div className="relative z-10 flex flex-col items-center justify-center h-screen w-full overflow-hidden">
         <div className="flex flex-row items-center justify-end top-0 right-0 absolute gap-2 p-4 text-white">
-          <Link href="https://github.com/aidangollan" target="_noblank">
+          <Link href={profile?.githubLink ?? ""} target="_noblank">
             <Github
               className={`w-6 h-6 duration-200 hover:font-medium`}
             />
           </Link>
-          <Link href="https://www.linkedin.com/in/aidangollan/" target="_noblank">
+          <Link href={profile?.linkedinLink ?? ""} target="_noblank">
             <Linkedin 
               className={`w-6 h-6 duration-200 hover:font-medium`}
             />
@@ -58,6 +61,12 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="absolute left-0 bottom-0 p-4 text-white z-50">
+          <Link href={profile?.resumeLink ?? ""} target="_blank" className="flex flex-row items-center gap-1">  
+            <p className="text-white">View Resume</p>
+            <ArrowRight className={`w-6 h-6 duration-200 hover:font-medium`} />
+          </Link>
         </div>
       </div>
     </>
