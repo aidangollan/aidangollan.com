@@ -11,7 +11,6 @@ export function HoverBorderGradient({
   className,
   as: Tag = "button",
   duration = 1,
-  clockwise = true,
   ...props
 }: React.PropsWithChildren<
   {
@@ -19,32 +18,27 @@ export function HoverBorderGradient({
     containerClassName?: string;
     className?: string;
     duration?: number;
-    clockwise?: boolean;
   } & React.HTMLAttributes<HTMLElement>
 >) {
   const [hovered, setHovered] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
   const rotateDirection = (currentDirection: Direction): Direction => {
-    const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
+    const directions: Direction[] = ["TOP", "RIGHT", "BOTTOM", "LEFT"];
     const currentIndex = directions.indexOf(currentDirection);
-    const nextIndex = clockwise
-      ? (currentIndex - 1 + directions.length) % directions.length
-      : (currentIndex + 1) % directions.length;
+    const nextIndex = (currentIndex + 1) % directions.length;
     return directions[nextIndex] ?? "TOP";
   };
 
   const movingMap: Record<Direction, string> = {
-    TOP: "radial-gradient(60% 120% at 50% 0%, hsl(0, 100%, 50%) 0%, rgba(255, 0, 0, 0) 100%)",
-    LEFT: "radial-gradient(60% 120% at 0% 50%, hsl(0, 100%, 50%) 0%, rgba(255, 0, 0, 0) 100%)",
-    BOTTOM:
-      "radial-gradient(60% 120% at 50% 100%, hsl(0, 100%, 50%) 0%, rgba(255, 0, 0, 0) 100%)",
-    RIGHT:
-      "radial-gradient(60% 120% at 100% 50%, hsl(0, 100%, 50%) 0%, rgba(255, 0, 0, 0) 100%)",
+    TOP: "linear-gradient(90deg, #3275F8 0%, #800080 50%, #FF0000 100%)",
+    LEFT: "linear-gradient(180deg, #3275F8 0%, #800080 50%, #FF0000 100%)",
+    BOTTOM: "linear-gradient(270deg, #3275F8 0%, #800080 50%, #FF0000 100%)",
+    RIGHT: "linear-gradient(0deg, #3275F8 0%, #800080 50%, #FF0000 100%)",
   };
 
   const highlight =
-    "radial-gradient(75% 181.15942028985506% at 50% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)";
+    "linear-gradient(90deg, #3275F8 0%, #800080 50%, #FF0000 100%)";
 
   useEffect(() => {
     if (!hovered) {
@@ -53,7 +47,7 @@ export function HoverBorderGradient({
       }, duration * 1000);
       return () => clearInterval(interval);
     }
-  }, [hovered, duration, clockwise]);
+  }, [hovered, duration]);
 
   return (
     <Tag
