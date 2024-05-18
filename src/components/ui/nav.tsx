@@ -7,19 +7,37 @@ import {
 import { cn } from "~/utils/cn";
 import Link from "next/link";
 import { HoverBorderGradient } from "./gradientButton";
+import { ArrowLeft } from "lucide-react";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+];
 
 export const FloatingNav = ({
-  navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
   className?: string;
 }) => {
+    const pathname = usePathname();
+
   return (
+    <>
+    {pathname !== "/" && (
+    <div className="absolute text-white top-10 left-10 p-5">
+        <Link href="/" className="flex items-center space-x-2">
+            <ArrowLeft className="w-6 h-6" />
+            <p>Home</p>
+        </Link>
+    </div>
+    )}
     <AnimatePresence mode="wait">
       <motion.div
         initial={{
@@ -49,14 +67,17 @@ export const FloatingNav = ({
             <span className="text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <HoverBorderGradient
-        containerClassName="rounded-full"
-        as="button"
-        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-        >
-            <span>Projects</span>
-        </HoverBorderGradient>
+        <Link href="projects">
+            <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+                <span>Projects</span>
+            </HoverBorderGradient>
+        </Link>
       </motion.div>
     </AnimatePresence>
+    </>
   );
 };
