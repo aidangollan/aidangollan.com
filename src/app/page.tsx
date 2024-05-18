@@ -1,9 +1,15 @@
+"use server";
+
 import { FloatingNav } from "~/components/ui/nav";
 import SparkleBlobs from "./sparkleBlobs";
 import Link from "next/link";
-import { ArrowLeft, Eye, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
+import { getViews, incrementViews } from "~/server/actions/views";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const views = await getViews();
+  await incrementViews();
+
   return (
     <>
       <SparkleBlobs />
@@ -19,7 +25,11 @@ export default function HomePage() {
               className={`w-6 h-6 duration-200 hover:font-medium`}
             />
           </Link>
-          </div>
+        </div>
+        <div className="flex flex-row items-center justify-end top-0 left-0 absolute gap-2 p-4 text-white">
+          <Eye className={`w-6 h-6 duration-200 hover:font-medium`} />
+          <p>{views}</p>
+        </div>
         <div className="w-full flex-grow flex flex-col items-center justify-center">
           <p className="text-white font-light md:text-7xl text-3xl lg:text-9xl text-center absolute bottom-80 z-20 mix-blend-difference">
             Aidan Gollan
