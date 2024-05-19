@@ -31,12 +31,12 @@ export const FloatingNav = ({
   return (
     <>
     {pathname !== "/" && (
-    <div className="absolute text-white top-10 left-10 p-5">
-        <Link href="/" className="flex items-center space-x-2">
-            <ArrowLeft className="w-6 h-6" />
-            <p>Home</p>
-        </Link>
-    </div>
+        <div className="absolute text-white top-10 left-0 p-5 lg:top-10 lg:left-10">
+            <Link href="/" className="flex items-center space-x-2">
+                <ArrowLeft className="w-6 h-6 sm:w-4 sm:h-4" />
+                <p className="hidden sm:inline">Home</p>
+            </Link>
+        </div>
     )}
     <AnimatePresence mode="wait">
       <motion.div
