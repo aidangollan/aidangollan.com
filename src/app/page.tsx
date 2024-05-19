@@ -1,5 +1,3 @@
-"use server";
-
 import { FloatingNav } from "~/components/ui/nav";
 import SparkleBlobs from "./sparkleBlobs";
 import Link from "next/link";
