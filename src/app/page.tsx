@@ -8,6 +8,8 @@ import { getViews, incrementViews } from "~/server/actions/views";
 import { getProfile } from "~/server/actions/profile";
 import { Profile } from "~/types";
 
+export const dynamic = 'force-dynamic';
+
 export default async function HomePage() {
   const views: string = await getViews();
   await incrementViews();
