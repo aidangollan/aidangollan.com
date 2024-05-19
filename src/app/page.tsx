@@ -11,8 +11,8 @@ import { Profile } from "~/types";
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
-  const views: string = await getViews();
   await incrementViews();
+  const views: string = await getViews();
   const profile: Profile | undefined = await getProfile();
 
   return (
