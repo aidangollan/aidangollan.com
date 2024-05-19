@@ -64,7 +64,7 @@ export const FloatingNav = ({
               "relativeitems-center flex space-x-1 text-neutral-60 hover:text-neutral-500"
             )}
           >
-            <span className="text-sm">{navItem.name}</span>
+            <span className="text-sm text-black">{navItem.name}</span>
           </Link>
         ))}
         <Link href="projects">
