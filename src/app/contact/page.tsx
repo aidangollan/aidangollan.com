@@ -1,4 +1,4 @@
-import { FloatingNav } from "~/components/ui/nav";
+import FloatingNav from "~/components/ui/nav";
 
 export default function Contact() {
     return (
