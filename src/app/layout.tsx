@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} font-sans`}>
-      <body>
+    <html lang="en" className={`${inter.variable} bg-black font-sans`}>
+      <body className="overflow-hidden min-h-screen min-w-screen">
         {children}
       </body>
     </html>
