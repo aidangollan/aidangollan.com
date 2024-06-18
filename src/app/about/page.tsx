@@ -21,7 +21,7 @@ export default function AboutPage() {
                 About Me
             </p>
             <p className="text-white font-light md:text-xl text-lg lg:text-2xl text-center z-20 mix-blend-difference">
-                How I Fell In Love With CS, And What I Built Along The Way
+                How I Fell In Love With CS, And What I've Built Along The Way
             </p>
             <div className="flex flex-row w-full items-center justify-center p-4">
                 <Chrono
