@@ -1,4 +1,4 @@
-import { FloatingNav } from "~/components/ui/nav";
+import FloatingNav from "~/components/ui/nav";
 import SparkleBlobs from "./sparkleBlobs";
 import Link from "next/link";
 import { ArrowRight, Eye, Github, Linkedin } from "lucide-react";
