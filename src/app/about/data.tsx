@@ -13,12 +13,12 @@ export const titles = [
     right: { title: "to Now" }
     },
     { 
-    left: { title: "Aug '23" },
+    left: { title: "Dec '23" },
     right: { title: "to May '24" }
     },
     { 
-    left: { title: "June '22" },
-    right: { title: "to Jan '23" }
+    left: { title: "June '23" },
+    right: { title: "to Jan '24" }
     },
     { 
     left: { title: "'16" },
