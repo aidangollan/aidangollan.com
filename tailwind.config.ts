@@ -9,6 +9,10 @@ export default {
         sans: ['var(--font-inter)'],
         mono: ['var(--font-roboto-mono)'],
       },
+      colors: {
+        darkBg: '#000000',
+        lightBg: '#333333',
+      },
       animation: {
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",

@@ -4,15 +4,16 @@ import type { MouseEventCallbacks } from '@neo4j-nvl/react';
 
 export const options = {
     primary: "white",
-    secondary: "black",
-    cardBgColor: "black",
+    secondary: "transparent",
+    cardBgColor: "transparent",
     cardForeColor: "white",
     cardTitleColor: "white",
+    cardMediaBgColor: "white",
+    titleColorActive: "white",
+    cardSubtitleColor: "white",
     cardDetailsColor: "white",
     titleColor: "white",
     cardDetailsBackGround: "white",
-    titleColorActive: "white",
-
 }
 
 export const mouseEventCallbacks: MouseEventCallbacks = {
@@ -98,5 +99,5 @@ export const nvlOptions: NvlOptions = {
     relationshipThreshold: 0.55,
     useWebGL: false,
     instanceId: 'graph-preview',
-    initialZoom: .1,
+    initialZoom: .17,
   };
