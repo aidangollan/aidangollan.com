@@ -8,8 +8,10 @@ import {
   serial,
   timestamp,
   varchar,
-  numeric
+  numeric,
+  text
 } from "drizzle-orm/pg-core";
+import { url } from "inspector";
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -35,5 +37,20 @@ export const profiles = createTable(
     githubLink: varchar("github_link").notNull(),
     linkedinLink: varchar("linkedin_link").notNull(),
     resumeLink: varchar("resume_link").notNull(),
+  }
+)
+
+export const projects = createTable(
+  "project",
+  {
+    id: serial("id").primaryKey(),
+    title: varchar("title").notNull(),
+    description: varchar("description").notNull(),
+    date: timestamp("date").notNull(),
+    type: varchar("type").notNull(),
+    views: numeric("views").notNull(),
+    repository: text("repository"),
+    url: text("url"),
+    code: text("code"),
   }
 )

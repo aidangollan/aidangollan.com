@@ -46,7 +46,11 @@ nodes.forEach(node => {
     nodeDegrees[node.id] = 0;
 });
 relationships.forEach(rel => {
+    // eslint-disable-next-line
+    // @ts-ignore
     nodeDegrees[rel.from] += 1;
+    // eslint-disable-next-line
+    // @ts-ignore
     nodeDegrees[rel.to] += 1;
 });
   

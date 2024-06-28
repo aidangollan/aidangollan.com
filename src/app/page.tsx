@@ -5,6 +5,7 @@ import { ArrowRight, Eye, Github, Linkedin } from "lucide-react";
 import { getViews, incrementViews } from "~/server/actions/views";
 import { getProfile } from "~/server/actions/profile";
 import { Profile } from "~/types";
+import { AO_URL, NOTELLO_URL } from "~/constants";
 
 export const dynamic = 'force-dynamic';
 
@@ -48,13 +49,13 @@ export default async function HomePage() {
               <div className="absolute font-thin top-[140px] w-full flex flex-col items-center p-4 gap-2">
                 <p className="text-gray-300 text-center text-2xl">
                   Software Engineering Intern @&nbsp;
-                  <Link target="_noblank" href="https://www.auto-owners.com/" className="text-white">
+                  <Link target="_noblank" href={AO_URL} className="text-white">
                     Auto-Owners Insurance
                   </Link>
                 </p>
                 <p className="text-gray-300 text-center text-2xl">
                   Founder of&nbsp;
-                  <Link target="_noblank" href="https://notello.ai" className="text-white">
+                  <Link target="_noblank" href={NOTELLO_URL} className="text-white">
                     Notello Inc.
                   </Link>
                 </p>
