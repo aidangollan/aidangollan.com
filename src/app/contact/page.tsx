@@ -1,5 +1,5 @@
 import FloatingNav from "~/components/ui/nav";
-import { ContactCard } from "./contactCard";
+import { ContactCard } from "../../components/contactCard";
 import { contactInfo } from "./data";
 
 export default function Contact() {

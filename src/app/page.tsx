@@ -1,5 +1,5 @@
 import FloatingNav from "~/components/ui/nav";
-import SparkleBlobs from "./sparkleBlobs";
+import SparkleBlobs from "../components/sparkleBlobs";
 import Link from "next/link";
 import { ArrowRight, Eye, Github, Linkedin } from "lucide-react";
 import { getViews, incrementViews } from "~/server/actions/views";
