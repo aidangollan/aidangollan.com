@@ -67,7 +67,7 @@ export default function TimelineWrapper({ isMobile }: { isMobile: boolean }) {
                     disableClickOnCircle
                     disableToolbar={true}
                     cardWidth={300}
-                    cardHeight={400}  // Increased height to accommodate content
+                    cardHeight={400}
                     lineWidth={3}
                     itemWidth={150}
                     scrollable={{ scrollbar: true }}
