@@ -31,9 +31,9 @@ export const leftSideContent = [
     <Card 
     title="Auto Owners Insurance" 
     subtitle="My Second Internship" 
-    content="I am currently building an automated note taking platform that
-        generates knowledge graphs from study materials, allowing students to gains a deeper understanding
-        of the topics in their courses."
+    content="I am currently working for Auto Owners Insurance as a Software Engineering Intern. 
+        I'm working on a RAG based Slack bot that allows team members to gain a deeper understanding 
+        of the services they work on."
     />,
     <Image 
         src="/SampleServe.png"
@@ -56,9 +56,9 @@ export const rightSideContent = [
     <Card 
     title="Notello" 
     subtitle="My Second Startup" 
-    content="I am currently working for Auto Owners Insurance as a Software Engineering Intern. 
-        I'm working on a RAG based Slack bot that allows team members to gain a deeper understanding 
-        of the services they work on."
+    content="I am currently building an automated note taking platform that
+        generates knowledge graphs from study materials, allowing students to gains a deeper understanding
+        of the topics in their courses."
     />,
     <Image 
     src="/AO.png"

@@ -28,27 +28,23 @@ export default function TimelineWrapper({ isMobile }: { isMobile: boolean }) {
             const leftContent = leftSideContent[index];
             const rightContent = rightSideContent[index];
             
-            let cardContent = '';
-            let cardTitle = '';
-            let cardSubtitle = '';
-
+            let cardContent;
             if (isCardComponent(leftContent)) {
-                cardTitle = leftContent.props.title;
-                cardSubtitle = leftContent.props.subtitle;
-                cardContent = leftContent.props.content;
+                cardContent = leftContent;
             } else if (isCardComponent(rightContent)) {
-                cardTitle = rightContent.props.title;
-                cardSubtitle = rightContent.props.subtitle;
-                cardContent = rightContent.props.content;
+                cardContent = rightContent;
             }
 
-            return {
-                title: `${title.left.title} ${title.right.title}`,
-                cardTitle,
-                cardSubtitle,
-                cardDetailedText: cardContent
-            };
-        });
+            if (cardContent) {
+                return {
+                    title: `${title.left.title} ${title.right.title}`,
+                    cardTitle: cardContent.props.title,
+                    cardSubtitle: cardContent.props.subtitle,
+                    cardDetailedText: cardContent.props.content
+                };
+            }
+            return null;
+        }).filter(Boolean);
     }, []);
 
     if (isMobile) {
@@ -75,7 +71,7 @@ export default function TimelineWrapper({ isMobile }: { isMobile: boolean }) {
                 >
                     {mobileItems.map((item, index) => (
                         <div key={index} className="p-4 mb-8 text-white">
-                            <p className="text-sm">{item.cardDetailedText}</p>
+                            <p className="text-sm">{item?.cardDetailedText}</p>
                         </div>
                     ))}
                 </Chrono>
