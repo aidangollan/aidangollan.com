@@ -1,7 +1,7 @@
 import React from "react";
 import FloatingNav from "~/components/ui/nav";
 import { getProjects } from "~/server/actions/projects";
-import { ProjectCard } from "./projectCard";
+import { ProjectCard } from "../../components/projectCard";
 
 export default async function ProjectsPage() {
     const projects = await getProjects();
