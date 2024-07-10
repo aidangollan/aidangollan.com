@@ -57,7 +57,7 @@ export const rightSideContent = [
     title="Notello" 
     subtitle="My Second Startup" 
     content="I am currently building an automated note taking platform that
-        generates knowledge graphs from study materials, allowing students to gains a deeper understanding
+        generates knowledge graphs from study materials, allowing students to gain a deeper understanding
         of the topics in their courses."
     />,
     <Image 
