@@ -62,7 +62,7 @@ export const Header = ({
 								Number(project?.views ?? 0),
 							)}
 						</span>
-						<Link target="_blank" href="https://www.linkedin.com/in/lunathanael/">
+						<Link target="_blank" href="https://www.linkedin.com/in/aidangollan/">
 							<Linkedin
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -71,7 +71,7 @@ export const Header = ({
 								} `}
 							/>
 						</Link>
-						<Link target="_blank" href="https://github.com/lunathanael/">
+						<Link target="_blank" href="https://github.com/aidangollan/">
 							<Github
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
