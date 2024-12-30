@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    padding: 1rem 8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    padding-left: 1rem;
+}
+
+.nav-left a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.nav-right {
+    padding-right: 1rem;
+}
+
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    text-decoration: underline;
+}
+
+.links-section {
+    padding: 2rem 0;
+}
+
+.links-list {
+    margin-top: 3rem;
+    list-style: none;
+    text-align: left;
+}
+
+.links-list li {
+    margin-bottom: 1.5rem;
+}
+
+.links-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.article-section p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+.article-section p:last-child {
+    margin-bottom: 0;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.manifesto p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+
+.concrete {
+    margin-top: 6rem;
+}
+
+.details {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-container {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.text-content {
+    flex-grow: 1;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .manifesto p {
+        font-size: 1rem;
+    }
+
+    .details {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-right {
+        width: 100%;
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .nav-left {
+        padding-left: 0;
+    }
+
+    .nav-right a {
+        margin-left: 1rem;
+    }
+
+    .article-section p {
+        font-size: 1rem;
+    }
+}
