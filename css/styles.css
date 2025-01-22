@@ -4,12 +4,27 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #000;
     color: #fff;
     font-family: 'Space Mono', monospace;
     line-height: 1.6;
     padding: 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 main {
