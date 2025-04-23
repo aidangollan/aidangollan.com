@@ -27,14 +27,31 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-main {
+.main-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 50px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: flex-start;
+    min-height: calc(100vh - 200px);
+}
+
+.game-container {
+    width: 485px;
+    flex-shrink: 0;
+    margin: 8rem 0 0 0;
+    position: sticky;
+    top: 2rem;
 }
 
 .navigation {
     padding: 1rem 8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,22 +148,16 @@ section {
 }
 
 .hero {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: auto;
     margin-bottom: 2rem;
 }
 
 .manifesto {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
+    margin: 0;
 }
 
 .manifesto-text {
-    flex: 1;
+    max-width: 600px;
 }
 
 .manifesto p {
@@ -180,9 +191,10 @@ section {
 }
 
 .game-container {
-    margin: 0;
+    margin: 0 auto 2rem;
     width: 485px;
     flex-shrink: 0;
+    padding-top: 225px; /* Adjust this value as needed */
 }
 
 .hero-content {
@@ -220,6 +232,16 @@ a {
 
 a:active {
     pointer-events: none;
+}
+
+img {
+    content-visibility: auto;
+    contain: content;
+}
+
+.navigation, .hero, .manifesto {
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 @media (max-width: 768px) {
@@ -274,6 +296,19 @@ a:active {
 
     .game-container {
         width: 100%;
-        margin-top: 2rem;
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .text-content-wrapper {
+        width: 100%;
+    }
+
+    .manifesto {
+        width: 100%;
     }
 }
