@@ -1,6 +1,7 @@
 {
     "scripts": {
-      "build": "echo 'No build required'",
+      "build": "node build-thoughts.js",
+      "build-thoughts": "node build-thoughts.js",
       "start": "serve .",
       "dev": "serve ."
     },
