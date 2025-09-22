@@ -54,9 +54,22 @@ async function loadQuotes() {
     }
 
     for (const { quote, author } of entries) {
-      const p = document.createElement('p');
-      p.textContent = author ? `${quote} — ${author}` : quote;
-      container.appendChild(p);
+      const quoteDiv = document.createElement('div');
+      quoteDiv.className = 'quote-item';
+      
+      const quotePara = document.createElement('p');
+      quotePara.className = 'quote-text';
+      quotePara.textContent = quote;
+      quoteDiv.appendChild(quotePara);
+      
+      if (author) {
+        const authorPara = document.createElement('p');
+        authorPara.className = 'quote-author';
+        authorPara.textContent = `— ${author}`;
+        quoteDiv.appendChild(authorPara);
+      }
+      
+      container.appendChild(quoteDiv);
     }
   } catch (err) {
     const p = document.createElement('p');
