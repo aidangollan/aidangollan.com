@@ -65,7 +65,7 @@ async function loadQuotes() {
       if (author) {
         const authorPara = document.createElement('p');
         authorPara.className = 'quote-author';
-        authorPara.textContent = `— ${author}`;
+        authorPara.textContent = author;
         quoteDiv.appendChild(authorPara);
       }
       
